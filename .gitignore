@@ -9,8 +9,6 @@ dist/
 .DS_Store
 
 # Environment variables
-.env
-.env.local
 .env*.local
 
 # TypeScript incremental build cache
@@ -36,7 +34,6 @@ fuzz/corpus/
 fuzz/artifacts/
 
 # Editor
-.vscode/
 .idea/
 
 *storybook.log
@@ -103,3 +100,4 @@ __MACOSX/
 # Temporary test output
 tmp/
 .tmp/
+config.bat
