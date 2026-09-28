@@ -1,7 +1,7 @@
 {
   "name": "stellarlock",
   "version": "0.1.0",
-  "description": "StellarLock — secure liquidity locking for Stellar/Soroban",
+  "description": "StellarLock \u2014 secure liquidity locking for Stellar/Soroban",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -22,13 +22,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "dev:testnet": "cp .env.testnet .env && vite --host",
-    "dev:staging": "cp .env.staging .env && vite --host",
-    "build": "tsc -b && vite build",
-    "build:testnet": "cp .env.testnet .env && tsc -b && vite build",
-    "build:staging": "cp .env.staging .env && tsc -b && vite build",
-    "build:mainnet": "cp .env.mainnet .env && tsc -b && vite build",
+    "dev": "node init && vite --host",
+    "dev:testnet": "node init && cp .env.testnet .env && vite --host",
+    "dev:staging": "node init && cp .env.staging .env && vite --host",
+    "build": "node init && tsc -b && vite build",
+    "build:testnet": "node init && cp .env.testnet .env && tsc -b && vite build",
+    "build:staging": "node init && cp .env.staging .env && tsc -b && vite build",
+    "build:mainnet": "node init && cp .env.mainnet .env && tsc -b && vite build",
     "preview": "vite preview",
     "indexer:start": "tsx indexer/index.ts",
     "notifier:start": "tsx indexer/notifier.ts",
@@ -65,9 +65,9 @@
     }
   },
   "dependencies": {
-    "@creit.tech/stellar-wallets-kit": "^1.7.6",
+    "@creit.tech/stellar-wallets-kit": "^2.7.0",
     "@stellar/freighter-api": "^6.0.1",
-    "@stellar/stellar-sdk": "^13.1.0",
+    "@stellar/stellar-sdk": "^17.1.0",
     "better-sqlite3": "^12.11.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
